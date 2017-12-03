@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel');
+
+.logo {
+  font-family: 'Cinzel', serif;
+  color: #808080;
+  margin: 10px;
+  position: fixed;
+}
+
+.menu {
+  font-family: 'Cinzel', serif;
+  color: #808080;
+  margin: 10px;
+  right: 0;
+  position: fixed;
+}

@@ -1,0 +1,32 @@
+export default function() {
+  return [
+    {fileName: 'natailealaska1'},
+    {fileName: 'natailealaska2'},
+    {fileName: 'natailealaska3'},
+    {fileName: 'natailealaska4'},
+    {fileName: 'natailealaska5'},
+    {fileName: 'natailealaska6'},
+    {fileName: 'natailealaska7'},
+    {fileName: 'natailealaska8'},
+    {fileName: 'natailealaska9'},
+    {fileName: 'natailealaska10'},
+    {fileName: 'natailealaska11'},
+    {fileName: 'natailealaska12'},
+    {fileName: 'natailealaska13'},
+    {fileName: 'natailealaska14'},
+    {fileName: 'natailealaska15'},
+    {fileName: 'natailealaska16'},
+    {fileName: 'natailealaska17'},
+    {fileName: 'natailealaska18'},
+    {fileName: 'natailealaska19'},
+    {fileName: 'natailealaska20'},
+    {fileName: 'natailealaska21'},
+    {fileName: 'natailealaska22'},
+    {fileName: 'natailealaska23'},
+    {fileName: 'natailealaska24'},
+    {fileName: 'natailealaska25'},
+    {fileName: 'natailealaska26'},
+    {fileName: 'natailealaska27'},
+    {fileName: 'natailealaska28'}
+  ];
+}
