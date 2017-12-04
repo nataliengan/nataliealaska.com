@@ -1,16 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Cinzel');
 
+/* prevents text from being selected/highlighted */
+* {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
 .logo {
   font-family: 'Cinzel', serif;
-  color: #808080;
-  margin: 10px;
+  color: #bfbfbf;
+  margin: 20px;
+  font-weight: bold;
   position: fixed;
 }
 
 .menu {
-  font-family: 'Cinzel', serif;
-  color: #808080;
-  margin: 10px;
+  margin: 20px;
   right: 0;
   position: fixed;
 }
+
+.menu-item {
+  color: #bfbfbf;
+  vertical-align: middle;
+  display: inline;
+  margin: 10px;
+}
+
+.menu-nav-item {
+  font-family: 'Cinzel', serif;
+}
+
+
+.home-bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1123px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/*.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  transition: opacity 0.5s linear;
+  -moz-transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.5s linear;
+}*/
