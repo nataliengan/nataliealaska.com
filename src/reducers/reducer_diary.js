@@ -1,14 +1,14 @@
 export default function() {
   return [
-    {fileName: 'natailealaska-diary1'},
-    {fileName: 'natailealaska-diary2'},
-    {fileName: 'natailealaska-diary3'},
-    {fileName: 'natailealaska-diary4'},
-    {fileName: 'natailealaska-diary5'},
-    {fileName: 'natailealaska-diary6'},
-    {fileName: 'natailealaska-diary7'},
-    {fileName: 'natailealaska-diary8'},
-    {fileName: 'natailealaska-diary9'},
-    {fileName: 'natailealaska-diary10'}
+    "nataliealaska-diary1.jpg",
+    "nataliealaska-diary2.jpg",
+    "nataliealaska-diary3.jpg",
+    "nataliealaska-diary4.jpg",
+    "nataliealaska-diary5.jpg",
+    "nataliealaska-diary6.jpg",
+    "nataliealaska-diary7.jpg",
+    "nataliealaska-diary8.jpg",
+    "nataliealaska-diary9.jpg",
+    "nataliealaska-diary10.jpg"
   ];
 }

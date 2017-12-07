@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import Gallery from './gallery';
 
-export default class Home extends Component {
+class Diary extends Component {
   render() {
     return (
-      <div>Diary page</div>
+      <div className="diary-container">
+        <Gallery imageNames={this.props.diaryImageNames}/>
+      </div>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    diaryImageNames: state.diaryImages
+  };
+}
+
+export default connect(mapStateToProps)(Diary);

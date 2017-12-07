@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
+@import url('https://fonts.googleapis.com/css?family=Rozha+One');
 
 /* prevents text from being selected/highlighted */
 * {
@@ -10,7 +10,7 @@
 }
 
 .logo {
-  font-family: 'Cinzel', serif;
+  font-family: 'Rohza One', serif;
   color: #bfbfbf;
   margin: 20px;
   font-weight: bold;
@@ -24,15 +24,20 @@
 }
 
 .menu-item {
-  color: #bfbfbf;
+  color: #c1c1c1;
   vertical-align: middle;
   display: inline;
   margin: 10px;
 }
 
 .menu-nav-item {
-  font-family: 'Cinzel', serif;
+  font-family: 'Rohza One', serif;
   font-weight: bold;
+  font-size: 18px;
+}
+
+.logo:hover, .menu-nav-item:hover {
+  color: #ffd1e1;
 }
 
 .home-bg-wrap {
@@ -61,13 +66,49 @@
   padding-top: 100px;
 }
 
-/*.hide {
-  opacity: 0;
+.info-top, .gallery-top {
+  height: 80px;
 }
 
-.show {
-  opacity: 1;
-  transition: opacity 0.5s linear;
-  -moz-transition: opacity 0.5s linear;
-  -webkit-transition: opacity 0.5s linear;
-}*/
+.gallery-column {
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.gallery-column img {
+  margin-top: 18px;
+  width: 100%;
+}
+
+.gallery-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.info-text {
+  font-family: 'Rohza One', serif;
+  font-weight: bold;
+  color: #bfbfbf;
+  margin-top: 20px;
+  text-align: center;
+}
+
+a {
+  color: #ffd1e1;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+    .gallery-column {
+        width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    .gallery-column {
+        width: 100%;
+   }
+}
