@@ -1,14 +1,18 @@
 import React, { Component } from 'react';
-import Header from './header';
+import Logo from './logo';
 import Menu from './menu';
+import MenuMobile from './menu_mobile';
 
 export default class NavBar extends Component {
     render () {
-        return (
-          <div>
-            <Header />
-            <Menu />
-          </div>
-        );
+      let isMobile = this.props.isMobile;
+      return (
+        <div>
+          <Logo />
+          {
+            isMobile? <MenuMobile /> : <Menu />
+          }
+        </div>
+      );
     }
 }

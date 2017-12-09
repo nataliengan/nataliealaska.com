@@ -17,7 +17,6 @@ export default class Home extends Component {
   componentDidMount() {
       setInterval(() => {
         let newIndex = (this.state.imageIndex + 1) % 4;
-        console.log("updated index", this.state.imageIndex);
         this.setState({ imageIndex: newIndex });
       }, 5000);
   }

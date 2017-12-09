@@ -11,7 +11,6 @@ export default class Gallery extends Component {
     let rowPointer = 0;
     let row1 = new Array();
     let row2 = new Array();
-    console.log(this.props.imageNames);
 
     for (let i = 0; i < this.props.imageNames.length; i++) {
       let currentImage = this.props.imageNames[i];
@@ -26,7 +25,6 @@ export default class Gallery extends Component {
 
   renderImagesInColumn(images) {
     return _.map(images, image => {
-      console.log(image);
       return (
         <ImageTile key={image} imageName={image} />
       );
@@ -35,7 +33,6 @@ export default class Gallery extends Component {
 
   render() {
     let sortedImage = this.sortImage();
-    console.log(sortedImage);
 
     return (
       <div>
