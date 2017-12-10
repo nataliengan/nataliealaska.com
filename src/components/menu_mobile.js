@@ -21,7 +21,7 @@ export default class MenuMobile extends Component {
     if (isNavigationOpen) {
       return (
         <div className="mobileMenuContainer">
-          <FullScreenMenu />
+          <FullScreenMenu onMenuItemSelected={this.toggleNavigationState.bind(this)} />
           <div className="mobile-menu-button">
             <i className="fa fa-times fa-3x menu-item" onClick={this.toggleNavigationState.bind(this)} aria-hidden="true"></i>
           </div>
