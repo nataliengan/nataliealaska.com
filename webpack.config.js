@@ -1,31 +1,40 @@
-var webpack = require('webpack');
-var path = require('path');
-
-var parentDir = path.join(__dirname, './');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-    entry: [
-        path.join(parentDir, 'src/index.js')
-    ],
-    module: {
-        loaders: [{
-            test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                loader: 'babel-loader'
-            },{
-                test: /\.less$/,
-                loaders: ["style-loader", "css-loder", "less-loader"]
-            },{
-              test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'
-            }
-        ]
-    },
-    output: {
-        path: parentDir + '/dist',
-        filename: 'bundle.js'
-    },
-    devServer: {
-        contentBase: parentDir,
-        historyApiFallback: true
-    }
+  entry: [
+      './src/index.js',
+      './style/style.css'
+  ],
+  output: {
+      path: path.resolve(__dirname, 'build'),
+      filename: 'bundle.js',
+      publicPath: 'build/'
+  },
+  module: {
+    loaders: [{
+          exclude: /node_modules/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['react', 'es2015', 'stage-1']
+          }
+        },{
+          use: ['style-loader', 'css-loader'],
+          test: /\.css$/
+        },{
+          test: /\.(jpe?g|png)$/,
+          use: [
+            {
+              loader: 'url-loader',
+              options: { limit: 40000 }
+            },
+            'image-webpack-loader'
+          ]
+        }
+      ]
+  },
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './'
+  }
 }

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import backgroundImage1 from '../assets/nataliealaska-home1.jpg';
-import backgroundImage2 from '../assets/nataliealaska-home2.jpg';
-import backgroundImage3 from '../assets/nataliealaska-home3.jpg';
-import backgroundImage4 from '../assets/nataliealaska-home4.jpg';
+import backgroundImage1 from '../../assets/nataliealaska-home1.jpg';
+import backgroundImage2 from '../../assets/nataliealaska-home2.jpg';
+import backgroundImage3 from '../../assets/nataliealaska-home3.jpg';
+import backgroundImage4 from '../../assets/nataliealaska-home4.jpg';
 
 
 export default class Home extends Component {

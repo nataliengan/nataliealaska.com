@@ -10,7 +10,7 @@ export default class About extends Component {
         <div className="info-top"></div>
         <div className="row">
           <div className="col-sm-6">
-            <img className="img-responsive" src={ require(`../assets/${profileImageName}`) } />
+            <img className="img-responsive" src={ require(`../../assets/${profileImageName}`) } />
           </div>
           <div className="col-sm-6">
             <div className="info-text">
