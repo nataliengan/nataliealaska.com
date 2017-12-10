@@ -44,13 +44,12 @@
 }
 
 .fullscreen-nav-container {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(255, 255, 255, 0.8);
-  /*background: rgba(33, 33, 33, 0.8);*/
   text-align: center;
   z-index: 1;
 }

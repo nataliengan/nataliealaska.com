@@ -27,6 +27,7 @@ export default function() {
     "nataliealaska-people25.jpg",
     "nataliealaska-people26.jpg",
     "nataliealaska-people27.jpg",
-    "nataliealaska-people28.jpg"
+    "nataliealaska-people28.jpg",
+    "nataliealaska-people29.jpg"
   ];
 }
