@@ -13,16 +13,17 @@
 
 .logo {
   font-family: 'Playfair Display', serif;
-  color: #bfbfbf;
+  color: #ffd1e1;
   margin: 20px;
   font-weight: bold;
   position: fixed;
 }
 
-.menu, .menuMobile {
+.menu, .mobile-menu-button {
   margin: 20px;
   right: 0;
   position: fixed;
+  z-index: 2;
 }
 
 .menu-item {
@@ -38,8 +39,41 @@
   font-size: 18px;
 }
 
-.logo:hover, .menu-nav-item:hover {
+.menu-nav-item:hover {
   color: #ffd1e1;
+}
+
+.fullscreen-nav-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  /*background: rgba(33, 33, 33, 0.8);*/
+  text-align: center;
+  z-index: 1;
+}
+
+.mobile-nav-group {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.mobile-nav-item {
+  color: #8c8c8c;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mobile-nav-item:hover {
+  color: #000000;
 }
 
 .home-bg-wrap {

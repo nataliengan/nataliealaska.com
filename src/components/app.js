@@ -12,7 +12,7 @@ import About from './about';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { isMobile: false };
+    this.state = { isMobile: window.innerWidth < 650 };
     this.throttledHandleWindowResize = this.throttledHandleWindowResize.bind(this);
   }
 

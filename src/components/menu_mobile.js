@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import FullScreenMenu from './fullscreen_menu';
+
 export default class MenuMobile extends Component {
   constructor(props) {
     super(props);
@@ -15,15 +17,19 @@ export default class MenuMobile extends Component {
 
   render() {
     let isNavigationOpen = this.state.isNavigationOpen;
+    console.log(this.state.isNavigationOpen);
     if (isNavigationOpen) {
       return (
-        <div className="menuMobile">
-          <i className="fa fa-navicon fa-3x menu-item" onClick={this.toggleNavigationState.bind(this)} aria-hidden="true"></i>
+        <div className="mobileMenuContainer">
+          <FullScreenMenu />
+          <div className="mobile-menu-button">
+            <i className="fa fa-times fa-3x menu-item" onClick={this.toggleNavigationState.bind(this)} aria-hidden="true"></i>
+          </div>
         </div>
       );
     } else {
       return (
-        <div className="menuMobile">
+        <div className="mobile-menu-button">
           <i className="fa fa-navicon fa-3x menu-item" onClick={this.toggleNavigationState.bind(this)} aria-hidden="true"></i>
         </div>
       );
