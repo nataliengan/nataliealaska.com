@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Switch } from 'react-router-dom';
 
-import NavBar from './navbar';
-import Home from './home';
-import People from './people';
-import Boudoir from './boudoir';
-import Diary from './diary';
-import About from './about';
+import NavBar from './NavBar';
+import Home from './Home';
+import People from './People';
+import Boudoir from './Boudoir';
+import Diary from './Diary';
+import About from './About';
 
 export default class App extends Component {
   constructor(props) {

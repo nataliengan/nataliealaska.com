@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import FullScreenMenu from './fullscreen_menu';
+import FullScreenMenu from './FullScreenMenu';
 
 export default class MenuMobile extends Component {
   constructor(props) {

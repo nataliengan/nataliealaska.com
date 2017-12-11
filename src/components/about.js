@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageTile from './image_tile';
+import ImageTile from './ImageTile';
 
 export default class About extends Component {
   render() {

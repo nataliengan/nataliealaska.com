@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ImageTile from './image_tile';
+import ImageTile from './ImageTile';
 import _ from 'lodash';
 
 export default class Gallery extends Component {

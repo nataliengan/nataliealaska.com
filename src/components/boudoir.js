@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Gallery from './gallery';
+import Gallery from './Gallery';
 
 class Boudoir extends Component {
   render() {

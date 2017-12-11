@@ -1,20 +1,32 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const VENDOR_LIBS = [
+  'file-loader',
+  'lodash',
+  'react',
+  'react-dom',
+  'react-redux',
+  'react-router-dom',
+  'redux',
+  'url-loader'
+];
 
 module.exports = {
-  entry: [
-      './src/index.js',
-      './style/style.css'
-  ],
+  entry: {
+    bundle: './src/index.js',
+    vendor: VENDOR_LIBS
+  },
   output: {
-      path: path.resolve(__dirname, 'build'),
-      filename: 'bundle.js',
-      publicPath: 'build/'
+      path: path.join(__dirname, 'dist'),
+      filename: '[name].[chunkhash].js'
   },
   module: {
-    loaders: [{
-          exclude: /node_modules/,
+    rules: [{
           loader: 'babel-loader',
+          test: /\.js$/,
+          exclude: /node_modules/,
           query: {
             presets: ['react', 'es2015', 'stage-1']
           }
@@ -33,8 +45,18 @@ module.exports = {
         }
       ]
   },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './'
-  }
+  node: {
+    fs: 'empty'
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      names: ['vendor', 'manifest']
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html'
+    })
+  ]
 }

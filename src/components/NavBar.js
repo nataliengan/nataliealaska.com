@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Logo from './logo';
-import Menu from './menu';
-import MenuMobile from './menu_mobile';
+
+import Logo from './Logo';
+import Menu from './Menu';
+import MenuMobile from './MenuMobile';
 
 export default class NavBar extends Component {
     render () {
