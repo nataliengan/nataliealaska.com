@@ -17,7 +17,7 @@ export default class App extends Component {
   }
 
   throttledHandleWindowResize = () => {
-      this.setState({ isMobile: window.innerWidth < 650 });
+    this.setState({ isMobile: window.innerWidth < 650 });
   }
 
   componentDidMount() {

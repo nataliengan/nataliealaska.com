@@ -13,7 +13,7 @@ const Store = createStore(reducers);
 
 ReactDOM.render(
   <Provider store={ Store }>
-    <HashRouter>
+    <HashRouter onUpdate={() => window.scrollTo(0, 0)}>
       <App />
     </HashRouter>
   </Provider>

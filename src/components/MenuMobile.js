@@ -12,12 +12,12 @@ export default class MenuMobile extends Component {
   }
 
   toggleNavigationState() {
-    this.setState({isNavigationOpen: !this.state.isNavigationOpen})
+    this.setState({isNavigationOpen: !this.state.isNavigationOpen});
   }
 
   render() {
     let isNavigationOpen = this.state.isNavigationOpen;
-    console.log(this.state.isNavigationOpen);
+
     if (isNavigationOpen) {
       return (
         <div className="mobileMenuContainer">

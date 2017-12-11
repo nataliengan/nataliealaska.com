@@ -15,10 +15,14 @@ export default class Home extends Component {
   }
 
   componentDidMount() {
-      setInterval(() => {
+    this.loadInterval = setInterval(() => {
         let newIndex = (this.state.imageIndex + 1) % 4;
         this.setState({ imageIndex: newIndex });
       }, 5000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.loadInterval);
   }
 
   render() {
