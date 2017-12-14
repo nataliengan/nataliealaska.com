@@ -1,14 +1,14 @@
 import { combineReducers } from 'redux';
-import peopleReducer from './reducer_people';
-import boudoirReducer from './reducer_boudoir';
-import diaryReducer from './reducer_diary';
-import selectedImageReducer from './reducer_selected_image';
+import PeopleReducer from './reducer_people';
+import BoudoirReducer from './reducer_boudoir';
+import DiaryReducer from './reducer_diary';
+import ActiveImage from './reducer_active_image';
 
 const rootReducer = combineReducers({
-  peopleImages: peopleReducer,
-  boudoirImages: boudoirReducer,
-  diaryImages: diaryReducer,
-  selectedImage: selectedImageReducer
+  peopleImages: PeopleReducer,
+  boudoirImages: BoudoirReducer,
+  diaryImages: DiaryReducer,
+  activeImage: ActiveImage
 });
 
 export default rootReducer;

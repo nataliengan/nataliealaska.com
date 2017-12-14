@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import ImageTile from './ImageTile';
+import { connect } from 'react-redux';
 import _ from 'lodash';
 
-export default class Gallery extends Component {
+import ImageTile from './ImageTile';
+import LightBox from './LightBox';
+
+class Gallery extends Component {
 
   /* Divides images into three
     arrangement of images is left-to-right, top-to-bottom
@@ -26,24 +29,35 @@ export default class Gallery extends Component {
   renderImagesInColumn(images) {
     return _.map(images, image => {
       return (
-        <ImageTile key={image} imageName={image} />
+        <ImageTile
+          key={image}
+          imageName={image} />
       );
     });
   }
 
+  getLightBox(activeImageName) {
+    if (activeImageName) {
+      return <LightBox imageName={activeImageName} />;
+    }
+  }
+
   render() {
-    let sortedImage = this.sortImage();
+    let sortedImages = this.sortImage();
+    let activeImageName = this.props.activeImage;
+    let lightBox = this.getLightBox(activeImageName);
 
     return (
       <div>
+        {lightBox}
         <div className="gallery-top"></div>
           <div className="gallery-container">
             <div className="gallery-row">
               <div className="gallery-column">
-                { this.renderImagesInColumn(sortedImage.row1) }
+                { this.renderImagesInColumn(sortedImages.row1) }
               </div>
               <div className="gallery-column">
-                { this.renderImagesInColumn(sortedImage.row2) }
+                { this.renderImagesInColumn(sortedImages.row2) }
               </div>
           </div>
         </div>
@@ -51,3 +65,11 @@ export default class Gallery extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    activeImage: state.activeImage
+  }
+}
+
+export default connect(mapStateToProps)(Gallery);
