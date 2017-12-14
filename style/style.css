@@ -140,6 +140,7 @@
 .lightbox-background img {
   position: relative;
   background: white;
+  margin-top: 60px;
   max-height: 90%;
   max-width: 90%;
   z-index: 4;
