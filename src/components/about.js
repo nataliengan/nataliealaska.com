@@ -19,9 +19,9 @@ export default class About extends Component {
               Based in Vancouver, BC
               <br/>
               <br/>
-              Instagram: <a href='https://www.instagram.com/nataliealaska/'>@nataliealaska</a>;
+              Instagram: <a href='https://www.instagram.com/nataliealaska/'>@nataliealaska</a>
               <br/>
-              Email: nataliealaskaphotography(at)gmail.com;
+              Email: nataliealaskaphotography(at)gmail.com
             </div>
           </div>
         </div>
