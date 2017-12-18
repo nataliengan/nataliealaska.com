@@ -6,7 +6,9 @@ import { bindActionCreators } from 'redux';
 class LightBox extends Component {
   render() {
     return (
-        <div className="lightbox-background">
+        <div
+          className="lightbox-background"
+          onClick={() => this.props.deselectImage()}>
           <img src={ require(`../../assets/${this.props.imageName}`) } />
           <i
             className="fa fa-times fa-3x menu-item lightbox-cancel-btn"

@@ -17,6 +17,7 @@
   margin: 20px;
   font-weight: bold;
   position: fixed;
+  z-index: 2;
 }
 
 .menu, .mobile-menu-button {
@@ -117,6 +118,11 @@
 .gallery-column img {
   margin-top: 18px;
   width: 100%;
+  transition: .5s ease;
+}
+
+.gallery-column img:hover {
+  opacity: 0.7;
 }
 
 .gallery-row:after {
@@ -140,7 +146,7 @@
 .lightbox-background img {
   position: relative;
   background: white;
-  margin-top: 60px;
+  margin-top: 40px;
   max-height: 90%;
   max-width: 90%;
   z-index: 4;
@@ -151,6 +157,10 @@
   top: 0;
   right: 0;
   z-index: 5;
+}
+
+.about-container {
+  overflow-x: hidden;
 }
 
 .info-text {
